@@ -20,7 +20,7 @@ const AdminLogin = () => {
       const response = await axios.post(`${URL}/api/admin/loginadmin`, credentials);
       const token = response.data.token;
       localStorage.setItem('token', token);
-      // Redirect the user to the admin dashboard or another appropriate page
+    
     } catch (error) {
       setError('Invalid username or password');
     }
