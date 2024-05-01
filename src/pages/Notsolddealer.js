@@ -26,21 +26,21 @@ const Notsolddealer = () => {
   };
 
   useEffect(() => {
-    // Fetch token
+   
     const token = localStorage.getItem('token');
     if (!token) {
-      // If token doesn't exist, navigate to login page
+    
       navigate('/login');
     } else {
       setToken(token);
-      // Fetch not sold vehicles if token exists
+     
       fetchNotSoldVehicles();
     }
   }, [navigate]);
 
-  // Ensure notSoldVehicles is an array before mapping
+
   if (!Array.isArray(notSoldVehicles)) {
-    return null; // or return a loading indicator or error message
+    return null; 
   }
 
   return (
